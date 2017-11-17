@@ -14,6 +14,8 @@ $teal: rgba(38, 240, 241, 1);
 $mint: rgba(196, 235, 200, 1);
 
 body {
+  background-image: url("/images/bar.svg");
+  background-repeat: no-repeat;
   color: $dark-gray;
   display: flex;
   flex-direction: column;
@@ -38,7 +40,7 @@ nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 2rem 5rem 3rem 5rem;
 
   .logo {
     display: flex;
@@ -63,7 +65,7 @@ nav {
       }
       p {
         margin-top: 0;
-        font-size: 16px;
+        font-size: 15px;
       }
     }
   }
