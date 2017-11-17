@@ -1,6 +1,6 @@
 # elixir-fountain
 
-## Elixir Daze
+## Elixir Fountaion Site
 
 Site is made on middleman
 
