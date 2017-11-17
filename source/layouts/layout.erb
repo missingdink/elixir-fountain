@@ -15,11 +15,64 @@
     <meta content="@elixirfountain" property="twitter:site">
     <meta content="Elixir Fountain" property="twitter:title">
     <meta content="Bringing you the News &amp; Inteviews from around the Elixir Community" property="twitter:description">
+    <link rel="stylesheet" href="https://use.typekit.net/tjz4kqr.css">
+    <script src="https://use.fontawesome.com/4ff57eebb0.js"></script>
     <title>Elixir Fountain</title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <nav>
+      <div class="logo">
+        <a href="/" class="logo-mark" alt="Elixir Fountain Logo">
+          <img src="/images/elixir-fountain-logo.svg"/>
+        </a>
+        <div class="logo-type">
+          <h1>Elixir Fountain</h1>
+          <p>Bringing you the News & Interviews from around the Elixir Community.gs</p>
+        </div>
+      </div>
+      <div class="nav-items">
+        <%= link_to(
+          "Posts",
+          "#",
+          target: "_blank",
+          class: "item"
+          ) %>
+        <%= link_to(
+          "Sponsors",
+          "#",
+          target: "_blank",
+          class: "item"
+          ) %>
+        <%= link_to(
+          "Elixir Daze",
+          "http://www.elixirdaze.com",
+          target: "_blank",
+          class: "item"
+          ) %>
+        <div class="social-media">
+          <a href="https://twitter.com/elixirfountain"><i class="fa fa-twitter"></i></a>
+          <a href="http://feeds.soundcloud.com/users/soundcloud:users:24638646/sounds.rss"><i class="fa fa-rss"></i></a>
+          <a href="mailto:johnny@elixirfountain.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </nav>
+    <main class="content">
+      <%= yield %>
+    </main>
+    <footer>
+      <%= link_to(
+        "Elixir Daze",
+        "http://www.elixirdaze.com",
+        target: "_blank"
+        ) %>
+
+        <div class="social-media">
+          <a href="https://twitter.com/elixirfountain"><i class="fa fa-twitter"></i></a>
+          <a href="http://feeds.soundcloud.com/users/soundcloud:users:24638646/sounds.rss"><i class="fa fa-rss"></i></a>
+          <a href="mailto:johnny@elixirfountain.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
   </body>
 </html>

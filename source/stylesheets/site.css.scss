@@ -1,24 +1,111 @@
+$dark-green: hsla(150%, 14%, 15%, 1);
+$purple: hsla(251%, 42%, 50%, 1);
+$lilac: hsla(218%, 52%, 69%, 1);
+$teal: hsla(180%, 88%, 55%, 1);
+$mint: hsla(126%, 49%, 85%, 1);
+$dark-gray: #333333;
+$white: #ffffff;
+
+/* RGB */
+$dark-green: rgba(32, 42, 37, 1);
+$purple: rgba(95, 75, 182, 1);
+$lilac: rgba(134, 165, 217, 1);
+$teal: rgba(38, 240, 241, 1);
+$mint: rgba(196, 235, 200, 1);
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
-}
+  color: $dark-gray;
+  display: flex;
+  flex-direction: column;
+  font-family: "europa", "helvetica", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  min-height: 100vh;
 
-a {
-  color: rgba(#000, 0.7);
+  main {
+    flex: 1;
+  }
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+  a {
+    color: $purple;
+    &:hover { color: $lilac; }
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 1rem 1rem 3rem 1rem;
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    .logo-mark {
+      display: flex;
+      color: $dark-gray;
+      margin-right: 1rem;
+      img { width: 100%; }
+    }
+
+    .logo-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-family: "omnes-pro";
+        font-size: 2.5em;
+        margin-bottom: 0.2rem;
+        margin-top: 0;
+        line-height: 1em;
+      }
+      p {
+        margin-top: 0;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    .item {
+      color: $dark-gray;
+      margin: 0 1rem;
+      text-decoration: none;
+      &:hover {
+        box-shadow: inset 0 -2px 0 0 $purple;
+        color: $purple;
+        transition: 0.1s ease-in;
+      }
+    }
+    .social-media {
+      margin-left: 4rem;
+      a {
+        color: $lilac;
+        margin: 0 0.5rem;
+        &:hover {
+          color: $purple;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $purple;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 4rem;
+
+  .social-media { margin-left: 3rem; }
+
+  a {
+    color: $white;
+    margin-right: 2rem;
+    text-decoration: none;
+  }
 }
