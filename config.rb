@@ -27,6 +27,8 @@ page '/*.txt', layout: false
 #   },
 # )
 
+activate :livereload
+
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
