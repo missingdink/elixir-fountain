@@ -10,58 +10,73 @@ $soundcloud:#e15500;
 .home__wrapper {
   padding: 0 5rem;
 
-  a {
-    text-decoration: none;
-  }
+  @media (max-width: 600px) { padding: 0.5rem; }
+
+  a { text-decoration: none; }
 
   .feature-post {
     background-color: $white;
     box-shadow: 0 20px 20px rgba(0,0,0,.08);
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 3rem;
     position: relative;
     transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+
+    @media (max-width: 800px) { flex-flow: column wrap; }
+
     &:hover {
       box-shadow: 0 30px 30px rgba(0,0,0,.1);
       transform: translate(0,-5px);
       transition-delay: 0s !important;
     }
 
-    .feature-image {
-      height: 100%;
-      width: 700px;
-      flex: 1;
+    .post-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      flex: 2;
+    }
+  }
+
+  .sound-cloud-tag {
+    background-color: $soundcloud;
+    color: $white;
+    font-size: 1.4em;
+    padding: 0.6rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .post-content {
+    flex: 1;
+    padding: 2rem;
+
+    .post-author {
+      border-radius: 100%;
+      width: 50px;
     }
 
-    .feature-content {
-      flex: 1;
-      padding: 2rem;
-      flex-direction: column;
-      justify-content: space-between;
+    .post-title:hover {
+      color: $purple;
+      text-decoration: underline;
+      transition: 0.2s ease-in;
+    }
+
+    .post-title,
+    .post-date { color: $dark-gray; }
+
+    .post-date {
+      font-weight: 100;
+      font-size: .9em;
+      text-transform: uppercase;
+    }
+
+    .tags-time {
       display: flex;
-
-      .sound-cloud-tag {
-        background-color: $soundcloud;
-        color: $white;
-        font-size: 1.4em;
-        padding: 0.6rem;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      .author { border-radius: 100%; }
-
-      .post-title,
-      .post-date {
-        color: $dark-gray;
-      }
-
-      .post-date {
-        font-weight: 100;
-        font-size: .9em;
-        text-transform: uppercase;
-      }
+      flex-direction: row;
+      justify-content: space-between;
 
       .tags {
         align-items: flex-end;
@@ -76,11 +91,97 @@ $soundcloud:#e15500;
           }
         }
       }
+
       .post-time {
         align-items: flex-end;
         align-self: flex-end;
       }
-
     }
+  }
+
+  .secondary-posts {
+    display: flex;
+    flex-flow: row wrap;
+
+    .secondary-post {
+      background-color: $white;
+      box-shadow: 0 20px 20px rgba(0,0,0,.08);
+      display: flex;
+      flex: 1;
+      margin-bottom: 3rem;
+      position: relative;
+      transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+
+      @media (max-width: 800px) { flex-flow: column wrap; }
+
+      &:hover {
+        box-shadow: 0 30px 30px rgba(0,0,0,.1);
+        transform: translate(0,-5px);
+        transition-delay: 0s !important;
+      }
+
+      &:first-of-type { margin-right: 1rem; }
+      &:last-of-type { margin-left: 1rem; }
+
+      @media (max-width: 800px) {
+
+        &:first-of-type { margin-right: 0rem; }
+        &:last-of-type { margin-left: 0rem; }
+      }
+
+      .post-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+      }
+    }
+  }
+
+  .posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .post-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      height: 125px;
+    }
+
+    .post {
+      flex: 1;
+      background-color: $white;
+      box-shadow: 0 20px 20px rgba(0,0,0,.08);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-right: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      @media (max-width: 800px) {
+        flex-flow: column wrap;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &:hover {
+        box-shadow: 0 30px 30px rgba(0,0,0,.1);
+        transform: translate(0,-5px);
+        transition-delay: 0s !important;
+      }
+    }
+  }
+
+  .no-image {
+    border-top: 10px solid $purple;
   }
 }
