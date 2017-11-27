@@ -1,0 +1,100 @@
+<div class="posts__wrapper">
+  <h2>Posts</h2>
+  <div class="posts">
+    <div class="post">
+      <img class="post-image" style="background-image: url(http://via.placeholder.com/200x125);" />
+      <div class="post-content">
+        <div class="sound-cloud-tag">
+          <i class="fa fa-soundcloud" aria-hidden="true"></i>
+        </div>
+        <img class="post-author" src="http://via.placeholder.com/50x50" />
+        <a href="/post.html" class="post-title"><h2><%= lorem.words 13 %></h2></a>
+        <h3 class="post-date"><%= lorem.date %></h3>
+        <div class="tags-time">
+          <div class="tags">
+            <a href="#" class="tag">Education</a>
+            <a href="#" class="tag">Elixir</a>
+          </div>
+          <div class="post-time">
+            <i class="fa fa-clock-o"></i>
+            <span class="time">25 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="post no-image">
+      <div class="post-content">
+        <img class="post-author" src="http://via.placeholder.com/50x50" />
+        <a href="/post.html" class="post-title"><h2><%= lorem.words 10 %></h2></a>
+        <h3 class="post-date"><%= lorem.date %></h3>
+        <div class="tags-time">
+          <div class="tags">
+            <a href="#" class="tag">Education</a>
+            <a href="#" class="tag">Elixir</a>
+          </div>
+          <div class="post-time">
+            <i class="fa fa-clock-o"></i>
+            <span class="time">25 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img class="post-image" style="background-image: url(http://via.placeholder.com/200x125);" />
+      <div class="post-content">
+        <div class="sound-cloud-tag">
+          <i class="fa fa-soundcloud" aria-hidden="true"></i>
+        </div>
+        <img class="post-author" src="http://via.placeholder.com/50x50" />
+        <a href="/post.html" class="post-title"><h2><%= lorem.words 15 %></h2></a>
+        <h3 class="post-date"><%= lorem.date %></h3>
+        <div class="tags-time">
+          <div class="tags">
+            <a href="#" class="tag">Education</a>
+            <a href="#" class="tag">Elixir</a>
+          </div>
+          <div class="post-time">
+            <i class="fa fa-clock-o"></i>
+            <span class="time">25 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img class="post-image" style="background-image: url(http://via.placeholder.com/200x125);" />
+      <div class="post-content">
+        <div class="sound-cloud-tag">
+          <i class="fa fa-soundcloud" aria-hidden="true"></i>
+        </div>
+        <img class="post-author" src="http://via.placeholder.com/50x50" />
+        <a href="/post.html" class="post-title"><h2><%= lorem.words 5 %></h2></a>
+        <h3 class="post-date"><%= lorem.date %></h3>
+        <div class="tags-time">
+          <div class="tags">
+            <a href="#" class="tag">Education</a>
+            <a href="#" class="tag">Elixir</a>
+          </div>
+          <div class="post-time">
+            <i class="fa fa-clock-o"></i>
+            <span class="time">25 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-navigation">
+    <div class="page-links">
+      <%= link_to(
+       ' Older Posts ',
+       '#',
+        class: "older-posts"
+       ) %>
+      <%= link_to(
+       'Newer Posts ',
+       '#',
+        class: "newer-posts"
+       ) %>
+     </div>
+    <img src="/images/small-bar.svg" />
+  </div>
+</div>

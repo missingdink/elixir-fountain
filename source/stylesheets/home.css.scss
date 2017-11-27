@@ -7,7 +7,9 @@ $dark-gray: #333333;
 $white: #ffffff;
 $soundcloud:#e15500;
 
-.home__wrapper {
+.home__wrapper,
+.posts__wrapper,
+.post__wrapper {
   padding: 0 5rem;
 
   @media (max-width: 600px) { padding: 0.5rem; }
@@ -51,7 +53,7 @@ $soundcloud:#e15500;
 
   .post-content {
     flex: 1;
-    padding: 1.8rem;
+    padding: 1.5rem;
 
     .post-author {
       border-radius: 100%;
@@ -112,11 +114,16 @@ $soundcloud:#e15500;
     .secondary-post {
       background-color: $white;
       box-shadow: 0 20px 20px rgba(0,0,0,.08);
-      display: flex;
       flex: 1;
       margin-bottom: 3rem;
       position: relative;
       transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+
+      .post-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
       @media (max-width: 800px) { flex-flow: column wrap; }
 
@@ -140,6 +147,8 @@ $soundcloud:#e15500;
         background-size: cover;
         background-position: center;
         flex: 1;
+        height: 300px;
+        width: 200px;
       }
     }
   }
@@ -153,18 +162,15 @@ $soundcloud:#e15500;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      flex: 1;
       height: 125px;
     }
 
     .post {
-      flex: 1;
       background-color: $white;
       box-shadow: 0 20px 20px rgba(0,0,0,.08);
       display: flex;
       flex-direction: column;
       flex: 1;
-      flex-shrink: 1;
       margin-right: 2rem;
       margin-bottom: 3rem;
       position: relative;
@@ -195,17 +201,36 @@ $soundcloud:#e15500;
   .page-navigation {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    .page-links {
+      display: flex;
+      justify-content: space-between;
+    }
 
     .read-more,
-    .see-more {
+    .see-more,
+    .newer-posts {
       align-self: flex-end;
       margin-bottom: 3rem;
       margin-top: 1rem;
+      &:after {
+        content: '\f061';
+        font-family: 'fontawesome';
+      }
+    }
+
+    .older-posts {
+      align-self: flex-start;
+      margin-bottom: 3rem;
+      margin-top: 1rem;
+      &:before {
+        content: '\f060';
+        font-family: 'fontawesome';
+      }
     }
 
     img {
-      width: 100%;
       margin-bottom: 4rem;
     }
   }
@@ -217,7 +242,6 @@ $soundcloud:#e15500;
     margin-bottom: 2rem;
 
     .sponsor {
-      margin: auto;
       margin-bottom: 1rem;
 
       &:hover {
