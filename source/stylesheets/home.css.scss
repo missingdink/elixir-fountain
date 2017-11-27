@@ -64,6 +64,12 @@ $soundcloud:#e15500;
       transition: 0.2s ease-in;
     }
 
+    .post-title {
+      h2 {
+        margin-bottom: 3rem;
+      }
+    }
+
     .post-title,
     .post-date { color: $dark-gray; }
 
@@ -158,6 +164,7 @@ $soundcloud:#e15500;
       display: flex;
       flex-direction: column;
       flex: 1;
+      flex-shrink: 1;
       margin-right: 2rem;
       margin-bottom: 3rem;
       position: relative;
@@ -198,7 +205,7 @@ $soundcloud:#e15500;
     }
 
     img {
-      clip-path: inset(0px,60px,200px,0px);
+      width: 100%;
       margin-bottom: 4rem;
     }
   }
@@ -208,5 +215,14 @@ $soundcloud:#e15500;
     flex-flow: row wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
+
+    .sponsor {
+      margin: auto;
+      margin-bottom: 1rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
