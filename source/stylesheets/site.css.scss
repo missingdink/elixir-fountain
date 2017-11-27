@@ -73,6 +73,8 @@ nav {
   .nav-items {
     display: flex;
     justify-content: space-around;
+    flex-flow: row wrap;
+
     .item {
       color: $dark-gray;
       margin: 0 1rem;

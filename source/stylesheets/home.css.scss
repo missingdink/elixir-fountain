@@ -51,7 +51,7 @@ $soundcloud:#e15500;
 
   .post-content {
     flex: 1;
-    padding: 2rem;
+    padding: 1.8rem;
 
     .post-author {
       border-radius: 100%;
@@ -183,5 +183,30 @@ $soundcloud:#e15500;
 
   .no-image {
     border-top: 10px solid $purple;
+  }
+
+  .page-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .read-more,
+    .see-more {
+      align-self: flex-end;
+      margin-bottom: 3rem;
+      margin-top: 1rem;
+    }
+
+    img {
+      clip-path: inset(0px,60px,200px,0px);
+      margin-bottom: 4rem;
+    }
+  }
+
+  .sponsors {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
   }
 }
