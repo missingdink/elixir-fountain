@@ -115,6 +115,8 @@ $soundcloud:#e15500;
       background-color: $white;
       box-shadow: 0 20px 20px rgba(0,0,0,.08);
       flex: 1;
+      display: flex;
+      flex-flow: row wrap;
       margin-bottom: 3rem;
       position: relative;
       transition: all 250ms cubic-bezier(.02, .01, .47, 1);
@@ -123,6 +125,9 @@ $soundcloud:#e15500;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex: 1;
+
+        @media (max-width: 800px) { order: 2; }
       }
 
       @media (max-width: 800px) { flex-flow: column wrap; }
@@ -147,8 +152,11 @@ $soundcloud:#e15500;
         background-size: cover;
         background-position: center;
         flex: 1;
-        height: 300px;
-        width: 200px;
+
+        @media (max-width: 800px) {
+          order: 1;
+          display: none;
+       }
       }
     }
   }
@@ -157,13 +165,7 @@ $soundcloud:#e15500;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
-    .post-image {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 125px;
-    }
+    padding: 0;
 
     .post {
       background-color: $white;
@@ -175,10 +177,7 @@ $soundcloud:#e15500;
       margin-bottom: 3rem;
       position: relative;
       transition: all 250ms cubic-bezier(.02, .01, .47, 1);
-
-      &:last-of-type {
-        margin-right: 0;
-      }
+      &:last-of-type { margin-right: 0; }
 
       @media (max-width: 800px) {
         flex-flow: column wrap;
@@ -186,17 +185,29 @@ $soundcloud:#e15500;
         margin-right: 0;
       }
 
+
       &:hover {
         box-shadow: 0 30px 30px rgba(0,0,0,.1);
         transform: translate(0,-5px);
         transition-delay: 0s !important;
       }
+
+      .post-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 125px;
+      }
+
+      .post-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
 
-  .no-image {
-    border-top: 10px solid $purple;
-  }
+  .no-image { border-top: 10px solid $purple; }
 
   .page-navigation {
     display: flex;
@@ -214,6 +225,7 @@ $soundcloud:#e15500;
       align-self: flex-end;
       margin-bottom: 3rem;
       margin-top: 1rem;
+
       &:after {
         content: '\f061';
         font-family: 'fontawesome';
@@ -230,9 +242,7 @@ $soundcloud:#e15500;
       }
     }
 
-    img {
-      margin-bottom: 4rem;
-    }
+    img { margin-bottom: 4rem; }
   }
 
   .sponsors {
@@ -241,12 +251,14 @@ $soundcloud:#e15500;
     justify-content: space-between;
     margin-bottom: 2rem;
 
-    .sponsor {
-      margin-bottom: 1rem;
+    @media (max-width: 800px) {
+      justify-content: center;
+    }
 
-      &:hover {
-        opacity: 0.8;
-      }
+    .sponsor {
+      margin: 0.5rem;
+
+      &:hover { opacity: 0.8; }
     }
   }
 }

@@ -1,13 +1,70 @@
 <div class="post__wrapper">
-  <h2><%= lorem.words 15 %></h2>
-  <img class="post-author" src="http://via.placeholder.com/50x50" />
-  <h4>
-    <%= lorem.name %>
-  </h4>
-  <p>
-    <%= lorem.paragraphs 2 %>
-  </p>
-  <p>
-    <%= lorem.paragraphs 2 %>
-  </p>
+  <img class="post-image" style="background-image: url(http://via.placeholder.com/1400x400);" />
+  <div class="post-container">
+    <h3 class="post-date"><%= lorem.date %></h3>
+    <h2 class="post-title-main"><%= lorem.words 15 %></h2>
+    <div class="post-author-img-name">
+      <img class="post-author-img" src="http://via.placeholder.com/50x50" />
+      <h4>
+        <%= lorem.name %>
+      </h4>
+    </div>
+    <div class="post-full">
+      <p>
+        <%= lorem.paragraphs 2 %>
+      </p>
+      <p>
+        <%= lorem.paragraphs 2 %>
+      </p>
+      <div class="post-code-block">
+        <p>
+          <%= lorem.paragraphs 1 %>
+        </p>
+      </div>
+      <p>
+        <%= lorem.paragraphs 2 %>
+      </p>
+    </div>
+    <div class="post-tags">
+      <a href="#" class="tag"><%= lorem.word %></a>
+      <a href="#" class="tag"><%= lorem.word %></a>
+    </div>
+    <div class="post-sponsor">
+      <h6>Sponsored By</h6>
+      <img src="<%= lorem.image('200x75') %>" />
+    </div>
+    <img src="/images/small-bar.svg" />
+    <div class="post-selections">
+      <h5>You may be also interested in</h5>
+      <ul class="posts">
+        <% 3.times do %>
+        <li class="post">
+          <img class="post-image" style="background-image: url(http://via.placeholder.com/200x125);" />
+          <div class="post-content">
+            <div class="post-top">
+              <div class="sound-cloud-tag">
+                <i class="fa fa-soundcloud" aria-hidden="true"></i>
+              </div>
+              <img class="post-author" src="http://via.placeholder.com/50x50" />
+              <a href="/post.html" class="post-title"><h2><%= lorem.words 13 %></h2></a>
+            </div>
+            <div class="post-bottom">
+              <h3 class="post-date"><%= lorem.date %></h3>
+              <div class="tags-time">
+                <div class="tags">
+                  <a href="#" class="tag"><%= lorem.word %></a>
+                  <a href="#" class="tag"><%= lorem.word %></a>
+                </div>
+                <div class="post-time">
+                  <i class="fa fa-clock-o"></i>
+                  <span class="time">25 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
