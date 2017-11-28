@@ -1,0 +1,54 @@
+.sponsors__wrapper {
+  padding: 0 5rem;
+
+  @media ( max-width: 800px ) {
+    padding: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  .sponsor-greeting {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+
+    h2 {
+      font-size: 2em;
+      margin-top: 0;
+    }
+  }
+
+  .sponsor-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+
+    @media ( max-width: 800px ) { padding: 0; }
+
+    .sponsor {
+      display: flex;
+      flex-direction: column;
+      flex: 25%;
+      margin-bottom: 4rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+
+      a {
+        display: flex;
+        justify-content: center;
+      }
+
+      h3 { font-size: 1.7em; }
+
+      p { line-height: 1.8em; }
+
+      a:hover { opacity: 0.8; }
+    }
+  }
+}

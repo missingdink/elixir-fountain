@@ -1,3 +1,19 @@
 <div class="sponsors__wrapper">
-  <h2>sponsors</h2>
+  <div class="sponsor-greeting">
+    <h2>Thanks to our Sponsors</h2>
+    <p>
+      Want to become a sponsor of the show and get you company or product mentioned to
+  1000s of Elixirists each week? Send an email to <a href="mailto:johnny@elixirfountain.com">johnny@elixirfountain.com</a> to
+  receive a Elixir Fountain Media Kit.
+    </p>
+  </div>
+  <ul class="sponsor-list">
+    <% 6.times do %>
+      <li class="sponsor">
+        <a href="#"><img src="<%= lorem.image('300x175')%>" /></a>
+        <h3><%= lorem.word %></h3>
+        <p><%= lorem.paragraphs 1 %></p>
+      </li>
+    <% end %>
+  </ul>
 </div>
