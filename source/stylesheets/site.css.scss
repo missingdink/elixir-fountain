@@ -57,6 +57,11 @@ nav {
       display: flex;
       color: $dark-gray;
       margin-right: 1rem;
+      transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+      &:hover {
+        transform: translate(0,-5px);
+        transition-delay: 0s !important;
+      }
       img { width: 100%; }
     }
 
