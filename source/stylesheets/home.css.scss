@@ -126,8 +126,6 @@ $soundcloud:#e15500;
         flex-direction: column;
         justify-content: space-between;
         flex: 1;
-
-        @media (max-width: 800px) { order: 2; }
       }
 
       @media (max-width: 800px) { flex-flow: column wrap; }
@@ -259,6 +257,16 @@ $soundcloud:#e15500;
       margin: 0.5rem;
 
       &:hover { opacity: 0.8; }
+    }
+  }
+
+  .cartoon {
+    width: 15rem;
+    margin: 0 auto 4rem auto;
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    &:hover {
+      transform: translate(0,-5px);
+      transition-delay: 0s !important;
     }
   }
 }
