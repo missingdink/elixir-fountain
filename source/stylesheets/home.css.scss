@@ -25,7 +25,10 @@ $soundcloud:#e15500;
     position: relative;
     transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 
-    @media (max-width: 800px) { flex-flow: column wrap; }
+    @media (max-width: 800px) {
+      flex-flow: column wrap;
+      border-top: 1px solid #eee;
+    }
 
     &:hover {
       box-shadow: 0 30px 30px rgba(0,0,0,.1);

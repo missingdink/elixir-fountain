@@ -1,9 +1,7 @@
 .sponsors__wrapper {
   padding: 0 5rem;
 
-  @media ( max-width: 800px ) {
-    padding: 1rem;
-  }
+  @media ( max-width: 800px ) { padding: 1rem; }
 
   a {
     text-decoration: none;
@@ -38,6 +36,8 @@
       margin-bottom: 4rem;
       margin-left: 2rem;
       margin-right: 2rem;
+
+      @media ( max-width: 800px ) { margin: 0; }
 
       a {
         display: flex;
